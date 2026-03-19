@@ -115,18 +115,6 @@
     animation: fadeUp 0.8s ease forwards 0.8s;
   }
 
-  .hero-scroll {
-    position: absolute;
-    bottom: 40px;
-    left: 8vw;
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    color: var(--muted);
-    text-transform: uppercase;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 1.2s;
-  }
-
   .hero-number {
     position: absolute;
     right: 8vw;
@@ -357,6 +345,45 @@
     text-transform: uppercase;
   }
 
+  /* HERO VIDEO BG */
+  .hero-video-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    z-index: 0;
+  }
+
+  .hero > *:not(.hero-video-bg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-scroll {
+    position: absolute !important;
+    bottom: 40px;
+    left: 8vw;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 1.2s;
+    z-index: 2;
+  }
+
+  .hero-written {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards 1s;
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -384,14 +411,16 @@
 
 <!-- HERO -->
 <section class="hero">
+  <video class="hero-video-bg" autoplay muted loop playsinline>
+    <source src="https://raw.githubusercontent.com/mxvdxn/mxvdxn.github.io/main/video_files/0319.mp4" type="video/mp4">
+  </video>
   <div class="hero-tag">An AI Filmmaking Experiment</div>
   <h1 class="hero-title">CODENAME:<br><span>WIDURI</span></h1>
-  <div class="hero-subtitle">Ratu Sunyi // Southeast Asia // 2025</div>
+  <div class="hero-subtitle">Ratu Sunyi // Southeast Asia // 2026</div>
   <p class="hero-desc">
-    A micro-series about a Javanese assassin who kills in a red kebaya.
-    Every frame generated with AI. Every shot written by hand.
-    No budget. No crew. Just prompts, obsession, and a karambit.
+    An assassin with no name. A red kebaya that everyone remembers.
   </p>
+  <div class="hero-written">Written by Dan Pradana</div>
   <div class="hero-scroll">Scroll to read</div>
   <div class="hero-number">W</div>
 </section>
@@ -433,7 +462,7 @@
         </div>
         <div class="stat">
           <div class="stat-label">Specialty</div>
-          <div class="stat-value">Silat / Karambit / Poison</div>
+          <div class="stat-value">Silat / Poison / Firearms</div>
         </div>
         <div class="stat">
           <div class="stat-label">Signature</div>
@@ -461,13 +490,13 @@
     </div>
     <div class="world-text">
       <p>
-        Ratu Sunyi — The Silent Queens — is an all-female assassin syndicate operating out of Java. They recruit broken women and train them in pencak silat, bladed weapons, firearms, and poison. Their cover is the oldest cover in the world: domesticity. A woman at a wedding, at a funeral, at an arisan. Nobody looks twice.
+        Ratu Sunyi — The Silent Queens — is an all-female assassin syndicate operating out of Southeast Asia. They recruit broken women and train them in pencak silat, bladed weapons, firearms, and poison. Their cover is the oldest cover in the world: domesticity. A woman at a wedding, at a funeral, at an arisan. Nobody looks twice.
       </p>
       <p>
-        The syndicate operates in the shadows of everyday Indonesian life. Jakarta, Surabaya, Makassar. Targets are exclusively drug lords, corrupt officials, and traffickers who buy their way out of justice. Ratu Sunyi is led by a founder known only as Ibu — never seen, only heard.
+        The syndicate operates in the shadows of everyday life across Southeast Asia. Targets are exclusively drug lords, corrupt officials, and traffickers who buy their way out of justice. Ratu Sunyi is led by a founder known only as Ibu — never seen, only heard.
       </p>
       <p>
-        The city is always there in the background. The Jakarta skyline. The wet pavement. The warung at 2AM. The fluorescent tubes in old buildings that never stop buzzing. This is not a clean world. It is a humid, neon-lit, deeply human world — and somewhere inside it, women in kebaya are doing things nobody will ever be able to explain.
+        The city is always there in the background. Skylines. Wet pavement. A warung at 2AM. Fluorescent tubes in old buildings that never stop buzzing. This is not a clean world. It is a humid, neon-lit, deeply human world — and somewhere inside it, women in kebaya are doing things nobody will ever be able to explain.
       </p>
     </div>
   </div>
@@ -485,7 +514,7 @@
         <div class="episode-num">Episode 01 / Pilot</div>
         <div class="episode-title">Malam Ini</div>
         <p class="episode-synopsis">
-          Widuri has one contract tonight: retrieve a sealed envelope from a low-life Jakarta scammer. Killing him wasn't on the brief. She does it anyway, ties him to his chair and sets the room on fire. Three more guards meet her in the corridor on the way out. She shoots all three. She walks out and lights a cigarette. The envelope and its contents are never explained.
+          Widuri is a Tier 1 operative of Ratu Sunyi: an all-female assassin syndicate operating out of Southeast Asia. Tonight she has one contract: retrieve a mysterious sealed envelope from a low-life scammer in Jametkarta. Killing him wasn't on the brief, but hey, let her decide on that.
         </p>
       </div>
     </div>
@@ -497,7 +526,7 @@
         <div class="episode-num">Episode 02</div>
         <div class="episode-title">The Swamp</div>
         <p class="episode-synopsis">
-          Somewhere in a Jametkarta swamp, Widuri is alone on an old wooden boat. She smokes, with an old Javanese song playing from her phone. The same song her father used to hum when she was a kid. Someone is also with her, but not for much longer. As they will then disappear in the mist of the swamp.
+          A corrupt official goes missing in Jametkarta. Nobody saw anything. Nobody heard anything. Just a woman in a red kebaya, sitting on a wooden boat, with an old song playing from her phone. A song that her late father used to hum when she was a kid. Someone is also with her, but not for long.
         </p>
       </div>
     </div>
@@ -509,35 +538,28 @@
   <div class="section-label">About the Project</div>
   <div class="about-grid reveal">
     <div>
-      <div class="about-title">AI as a filmmaking tool, not a shortcut.</div>
+      <div class="about-title">This started as a question: how far can AI go when you treat it like a camera?</div>
       <p class="about-text">
-        Kebaya Kill-N-Beat$ is an experiment in using generative AI to produce a micro-series with cinematic intent. Every shot is written by hand as a text-to-video prompt — obsessively specific, technically precise, and directed like a real film.
+        Codename: Widuri is a micro-series shot entirely with generative AI. Every scene starts as a text-to-video prompt, written by hand, specific enough to function as a real shot list.
       </p>
       <p class="about-text">
-        The aesthetic is intentional: handheld DV cam, Blair Witch-style voyeurism, no dialogue, pure sound design and atmosphere. The goal is to see how far AI video generation can go when treated as a camera, not a magic button.
+        This project exists because omni-reference technology has been getting genuinely interesting. The ability to lock a character visually across scenes, same face, same costume, same presence, is what makes something like this possible. It is still far from perfect. Consistency in performance, location, props, and the smaller details remain a real challenge. But it is improving, and that is worth exploring seriously.
       </p>
       <p class="about-text">
-        Widuri is the vehicle. Indonesia is the backdrop. The red kebaya is the signature. Everything else is figured out one prompt at a time.
+        The character sheets used as omni-reference were generated with Google Nano Banana 2, chosen because their dataset carries stronger racial nuance for Southeast Asian faces. Text-to-video omni-reference is running on Kling 3.0.
       </p>
     </div>
-    <div>
-      <ul class="tools-list">
-        <li>Character Design <span>Freepik / Flux</span></li>
-        <li>Video Generation <span>Kling AI / Hailuo</span></li>
-        <li>Prompt Engineering <span>Claude (Anthropic)</span></li>
-        <li>Sound Design <span>Manual / Foley</span></li>
-        <li>Editing <span>DaVinci Resolve</span></li>
-        <li>Visual Style <span>DV Cam / Blair Witch</span></li>
-        <li>Format <span>Micro-series / 2-3 min per episode</span></li>
-      </ul>
-    </div>
+    <div></div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-title">Codename: Widuri</div>
-  <div class="footer-meta">Kebaya Kill-N-Beat$ // AI Film Project // 2025</div>
+  <div style="text-align: right;">
+    <div class="footer-meta"><a href="https://mxvdxn.github.io/" style="color: inherit; text-decoration: none;">MXVDXN</a> // 2026</div>
+    <div class="footer-meta" style="margin-top: 6px;">© 2026 Dan Pradana. All rights reserved.</div>
+  </div>
 </footer>
 
 <script>
